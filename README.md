@@ -35,18 +35,6 @@ Repositorio de experimentación para **detección/identificación/reconocimiento
 
 > Recomendación fuerte: **usar entornos virtuales separados** por familia de dependencias (especialmente si mezclas TensorFlow/DeepFace, MediaPipe, InsightFace, PyTorch).
 
----
-
-## Instalación rápida (base)
-
-```bash
-git clone https://github.com/feliUsa/Facial-Recognition-with-Cuasiconformal-Mapping.git
-cd Facial-Recognition-with-Cuasiconformal-Mapping
-
-python -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip wheel setuptools
-
 
 ## Datasets utilizados (entrenamiento y pruebas)
 
@@ -64,3 +52,18 @@ Para los experimentos se usaron datasets públicos de Kaggle y se organizaron re
   - **LFW (lfw-dataset, Kaggle)**: usado para pruebas de **verificación/reconocimiento** (comparación de embeddings, umbrales de similitud y métricas agregadas).
 
 > Nota: Los dataframes se emplean para estructurar etiquetas/predicciones, scores (similitud/distancia), tiempos por etapa (detección/embedding/total), FPS y métricas globales (accuracy, precision/recall, etc.).
+
+
+---
+
+## Instalación rápida (base)
+
+```bash
+git clone https://github.com/feliUsa/Facial-Recognition-with-Cuasiconformal-Mapping.git
+cd Facial-Recognition-with-Cuasiconformal-Mapping
+
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip wheel setuptools
+
+
