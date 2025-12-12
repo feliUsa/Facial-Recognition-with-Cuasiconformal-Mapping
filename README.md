@@ -46,3 +46,21 @@ cd Facial-Recognition-with-Cuasiconformal-Mapping
 python -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip wheel setuptools
+
+
+## Datasets utilizados (entrenamiento y pruebas)
+
+Para los experimentos se usaron datasets públicos de Kaggle y se organizaron resultados en **dataframes** (CSV/estructuras tabulares) para entrenamientos, pruebas y cálculo de métricas.
+
+### Asignación por módulo
+
+- **`cuasiconforme/`**
+  - **Celebrity Faces Dataset (Kaggle)**: usado para pruebas relacionadas con el flujo de normalización geométrica y evaluación del mapeo cuasiconforme sobre rostros.
+
+- **`identificacion/`**
+  - **WIDER FACE (wider-face-detection, Kaggle)**: usado principalmente para escenarios de **detección/identificación** con alta variabilidad (escala, oclusión, iluminación) y para evaluar robustez.
+
+- **`reconocimiento/`**
+  - **LFW (lfw-dataset, Kaggle)**: usado para pruebas de **verificación/reconocimiento** (comparación de embeddings, umbrales de similitud y métricas agregadas).
+
+> Nota: Los dataframes se emplean para estructurar etiquetas/predicciones, scores (similitud/distancia), tiempos por etapa (detección/embedding/total), FPS y métricas globales (accuracy, precision/recall, etc.).
